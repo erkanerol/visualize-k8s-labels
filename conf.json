@@ -1,0 +1,128 @@
+{
+  "namespaced": [
+    {
+      "group": "hco.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "hyperconvergeds"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "kubevirts"
+    },
+    {
+      "group": "cdi.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "datavolumes"
+    },
+    {
+      "group": "ssp.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "ssps"
+    },
+    {
+      "group": "v2v.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "ovirtproviders"
+    },
+    {
+      "group": "v2v.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "v2vvmwares"
+    },
+    {
+      "group": "v2v.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "resourcemappings"
+    },
+    {
+      "group": "v2v.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "virtualmachineimports"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachineinstancemigrations"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachineinstancepresets"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachineinstancereplicasets"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachineinstances"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachines"
+    },
+    {
+      "group": "kubevirt.io",
+      "version": "v1",
+      "kind": "virtualmachines"
+    },
+    {
+      "group": "snapshot.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "virtualmachinerestores"
+    },
+    {
+      "group": "snapshot.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "virtualmachinesnapshotcontents"
+    },
+    {
+      "group": "snapshot.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "virtualmachinesnapshots"
+    }
+  ],
+  "cluster": [
+    {
+      "group": "cdi.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "cdis"
+    },
+    {
+      "group": "cdi.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "cdiconfigs"
+    },
+    {
+      "group": "v2v.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "vmimportconfigs"
+    },
+    {
+      "group": "nodemaintenance.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "nodemaintenances"
+    },
+    {
+      "group": "networkaddonsoperator.network.kubevirt.io",
+      "version": "v1alpha1",
+      "kind": "networkaddonsconfigs"
+    },
+    {
+      "group": "hostpathprovisioner.kubevirt.io",
+      "version": "v1beta1",
+      "kind": "hostpathprovisioners"
+    }
+  ],
+  "alias": {
+    "hco-operator": "deployments/hco-operator",
+    "kubevirt-operator": "deployments/virt-operator"
+  },
+  "component_alias": {
+    "kubevirt": "compute"
+  }
+}
