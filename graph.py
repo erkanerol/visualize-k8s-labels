@@ -6,6 +6,12 @@ KUBERNETES_IO_COMPONENT = "app.kubernetes.io/component"
 KUBERNETES_IO_MANAGED_BY = "app.kubernetes.io/managed-by"
 
 
+def get_labels(i):
+    if "metadata" in i and "labels" in i["metadata"]:
+        return i["metadata"]["labels"]
+    return []
+
+
 class GraphGenerator(object):
 
     def __init__(self, conf: configuration.Configuration, objects, outdir):
@@ -24,7 +30,7 @@ class GraphGenerator(object):
             node_name = self.get_node_name(i)
             dot.node(node_name, node_name)
 
-            labels = i["metadata"]["labels"]
+            labels = get_labels(i)
             for label in labels:
                 if label == KUBERNETES_IO_MANAGED_BY:
                     managed_node_name = self.transform_alias(labels[KUBERNETES_IO_MANAGED_BY])
@@ -46,7 +52,7 @@ class GraphGenerator(object):
             node_name = self.get_node_name(i)
             dot.node(node_name, node_name)
 
-            labels = i["metadata"]["labels"]
+            labels = get_labels(i)
             if KUBERNETES_IO_COMPONENT in labels:
                 component_name = self.transform_component_alias(labels[KUBERNETES_IO_COMPONENT])
 
