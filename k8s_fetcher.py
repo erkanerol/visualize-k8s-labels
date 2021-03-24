@@ -26,12 +26,12 @@ class ObjectFetcher(object):
         v1 = client.AppsV1Api()
         deployments = v1.list_namespaced_deployment(ns)
         for d in deployments.items:
-            d.kind = "deployments"
+            d.kind = "deployment"
             result.append(d.to_dict())
 
         ds = v1.list_namespaced_daemon_set(ns)
         for d in ds.items:
-            d.kind = "daemonsets"
+            d.kind = "daemonset"
             result.append(d.to_dict())
 
         return result

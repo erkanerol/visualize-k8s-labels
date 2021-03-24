@@ -119,8 +119,9 @@
     }
   ],
   "alias": {
-    "hco-operator": "deployments/hco-operator",
-    "kubevirt-operator": "deployments/virt-operator"
+    "hco-operator": "deployment/hco-operator",
+    "kubevirt-operator": "deployment/virt-operator",
+    "ssp-operator": "deployment/ssp-operator"
   },
   "component_alias": {
     "kubevirt": "compute"

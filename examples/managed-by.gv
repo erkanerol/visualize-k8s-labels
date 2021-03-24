@@ -2,62 +2,70 @@
 digraph {
 	"HyperConverged/kubevirt-hyperconverged" [label="HyperConverged/kubevirt-hyperconverged"]
 	"KubeVirt/kubevirt-kubevirt-hyperconverged" [label="KubeVirt/kubevirt-kubevirt-hyperconverged"]
-	"deployments/hco-operator" [label="deployments/hco-operator"]
-	"deployments/hco-operator" -> "KubeVirt/kubevirt-kubevirt-hyperconverged"
+	"deployment/hco-operator" [label="deployment/hco-operator"]
+	"deployment/hco-operator" -> "KubeVirt/kubevirt-kubevirt-hyperconverged"
+	"SSP/ssp-kubevirt-hyperconverged" [label="SSP/ssp-kubevirt-hyperconverged"]
+	"deployment/hco-operator" [label="deployment/hco-operator"]
+	"deployment/hco-operator" -> "SSP/ssp-kubevirt-hyperconverged"
 	"CDI/cdi-kubevirt-hyperconverged" [label="CDI/cdi-kubevirt-hyperconverged"]
-	"deployments/hco-operator" [label="deployments/hco-operator"]
-	"deployments/hco-operator" -> "CDI/cdi-kubevirt-hyperconverged"
+	"deployment/hco-operator" [label="deployment/hco-operator"]
+	"deployment/hco-operator" -> "CDI/cdi-kubevirt-hyperconverged"
 	"CDIConfig/config" [label="CDIConfig/config"]
 	"VMImportConfig/vmimport-kubevirt-hyperconverged" [label="VMImportConfig/vmimport-kubevirt-hyperconverged"]
-	"deployments/hco-operator" [label="deployments/hco-operator"]
-	"deployments/hco-operator" -> "VMImportConfig/vmimport-kubevirt-hyperconverged"
+	"deployment/hco-operator" [label="deployment/hco-operator"]
+	"deployment/hco-operator" -> "VMImportConfig/vmimport-kubevirt-hyperconverged"
 	"NetworkAddonsConfig/cluster" [label="NetworkAddonsConfig/cluster"]
-	"deployments/hco-operator" [label="deployments/hco-operator"]
-	"deployments/hco-operator" -> "NetworkAddonsConfig/cluster"
-	"deployments/cdi-apiserver" [label="deployments/cdi-apiserver"]
-	"deployments/cdi-deployment" [label="deployments/cdi-deployment"]
-	"deployments/cdi-operator" [label="deployments/cdi-operator"]
+	"deployment/hco-operator" [label="deployment/hco-operator"]
+	"deployment/hco-operator" -> "NetworkAddonsConfig/cluster"
+	"deployment/cdi-apiserver" [label="deployment/cdi-apiserver"]
+	"deployment/cdi-deployment" [label="deployment/cdi-deployment"]
+	"deployment/cdi-operator" [label="deployment/cdi-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/cdi-operator"
-	"deployments/cdi-uploadproxy" [label="deployments/cdi-uploadproxy"]
-	"deployments/cluster-network-addons-operator" [label="deployments/cluster-network-addons-operator"]
+	OLM -> "deployment/cdi-operator"
+	"deployment/cdi-uploadproxy" [label="deployment/cdi-uploadproxy"]
+	"deployment/cluster-network-addons-operator" [label="deployment/cluster-network-addons-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/cluster-network-addons-operator"
-	"deployments/hco-operator" [label="deployments/hco-operator"]
+	OLM -> "deployment/cluster-network-addons-operator"
+	"deployment/hco-operator" [label="deployment/hco-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/hco-operator"
-	"deployments/hco-webhook" [label="deployments/hco-webhook"]
+	OLM -> "deployment/hco-operator"
+	"deployment/hco-webhook" [label="deployment/hco-webhook"]
 	OLM [label=OLM]
-	OLM -> "deployments/hco-webhook"
-	"deployments/hostpath-provisioner-operator" [label="deployments/hostpath-provisioner-operator"]
+	OLM -> "deployment/hco-webhook"
+	"deployment/hostpath-provisioner-operator" [label="deployment/hostpath-provisioner-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/hostpath-provisioner-operator"
-	"deployments/kubemacpool-mac-controller-manager" [label="deployments/kubemacpool-mac-controller-manager"]
-	"deployments/nmstate-webhook" [label="deployments/nmstate-webhook"]
-	"deployments/node-maintenance-operator" [label="deployments/node-maintenance-operator"]
+	OLM -> "deployment/hostpath-provisioner-operator"
+	"deployment/kubemacpool-mac-controller-manager" [label="deployment/kubemacpool-mac-controller-manager"]
+	"deployment/nmstate-webhook" [label="deployment/nmstate-webhook"]
+	"deployment/node-maintenance-operator" [label="deployment/node-maintenance-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/node-maintenance-operator"
-	"deployments/ssp-operator" [label="deployments/ssp-operator"]
+	OLM -> "deployment/node-maintenance-operator"
+	"deployment/ssp-operator" [label="deployment/ssp-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/ssp-operator"
-	"deployments/virt-api" [label="deployments/virt-api"]
-	"deployments/virt-operator" [label="deployments/virt-operator"]
-	"deployments/virt-operator" -> "deployments/virt-api"
-	"deployments/virt-controller" [label="deployments/virt-controller"]
-	"deployments/virt-operator" [label="deployments/virt-operator"]
-	"deployments/virt-operator" -> "deployments/virt-controller"
-	"deployments/virt-operator" [label="deployments/virt-operator"]
+	OLM -> "deployment/ssp-operator"
+	"deployment/virt-api" [label="deployment/virt-api"]
+	"deployment/virt-operator" [label="deployment/virt-operator"]
+	"deployment/virt-operator" -> "deployment/virt-api"
+	"deployment/virt-controller" [label="deployment/virt-controller"]
+	"deployment/virt-operator" [label="deployment/virt-operator"]
+	"deployment/virt-operator" -> "deployment/virt-controller"
+	"deployment/virt-operator" [label="deployment/virt-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/virt-operator"
-	"deployments/vm-import-controller" [label="deployments/vm-import-controller"]
-	"deployments/vm-import-operator" [label="deployments/vm-import-operator"]
+	OLM -> "deployment/virt-operator"
+	"deployment/virt-template-validator" [label="deployment/virt-template-validator"]
+	"deployment/ssp-operator" [label="deployment/ssp-operator"]
+	"deployment/ssp-operator" -> "deployment/virt-template-validator"
+	"deployment/vm-import-controller" [label="deployment/vm-import-controller"]
+	"deployment/vm-import-operator" [label="deployment/vm-import-operator"]
 	OLM [label=OLM]
-	OLM -> "deployments/vm-import-operator"
-	"daemonsets/bridge-marker" [label="daemonsets/bridge-marker"]
-	"daemonsets/kube-cni-linux-bridge-plugin" [label="daemonsets/kube-cni-linux-bridge-plugin"]
-	"daemonsets/multus" [label="daemonsets/multus"]
-	"daemonsets/nmstate-handler" [label="daemonsets/nmstate-handler"]
-	"daemonsets/virt-handler" [label="daemonsets/virt-handler"]
-	"deployments/virt-operator" [label="deployments/virt-operator"]
-	"deployments/virt-operator" -> "daemonsets/virt-handler"
+	OLM -> "deployment/vm-import-operator"
+	"daemonset/bridge-marker" [label="daemonset/bridge-marker"]
+	"daemonset/kube-cni-linux-bridge-plugin" [label="daemonset/kube-cni-linux-bridge-plugin"]
+	"daemonset/kubevirt-node-labeller" [label="daemonset/kubevirt-node-labeller"]
+	"deployment/ssp-operator" [label="deployment/ssp-operator"]
+	"deployment/ssp-operator" -> "daemonset/kubevirt-node-labeller"
+	"daemonset/nmstate-handler" [label="daemonset/nmstate-handler"]
+	"daemonset/virt-handler" [label="daemonset/virt-handler"]
+	"deployment/virt-operator" [label="deployment/virt-operator"]
+	"deployment/virt-operator" -> "daemonset/virt-handler"
 }
